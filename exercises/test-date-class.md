@@ -65,35 +65,35 @@ Année :
 Normalement toujours valide.
 
 Mois :
-Mois valide (ex. : 1, 6, 12)
+Mois valide (ex. : 1, 6, 12) ;
 Mois invalide (ex. : 0, 13)
 
 Jour :
-Jour valide pour le mois (ex. : 1, 15, 28)
+Jour valide pour le mois (ex. : 1, 15, 28) ;
 Jour invalide pour le mois (ex. : 0, 32)
 
 Année bissextile :
-Année bissextile (février a 29 jours)
+Année bissextile (février a 29 jours) ;
 Année non bissextile
 
 ##### Blocs :
 
-Mois valide, jour valide
-Mois invalide, jour valide
-Mois valide, jour invalide
-Mois invalide, jour invalide
+Mois valide, jour valide ;
+Mois invalide, jour valide ;
+Mois valide, jour invalide ;
+Mois invalide, jour invalide ;
 
 `isLeapYear(int year)`
 
 ##### Caractéristiques :
 
 Année :
-Année bissextile
-Année non bissextile
+Année bissextile ;
+Année non bissextile ;
 
 ##### Blocs :
 
-Année bissextile
+Année bissextile ;
 Année non bissextile
 
 `nextDate()`
@@ -101,57 +101,58 @@ Année non bissextile
 ##### Caractéristiques :
 
 Date actuelle :
-Date au milieu du mois
-Dernier jour du mois
-Scénarios d'année bissextile et non bissextile
+Date au milieu du mois ;
+Dernier jour du mois ;
+Scénarios d'année bissextile et non bissextile ;
 
 ##### Blocs :
 
-Milieu du mois, non dernier jour
-Milieu du mois, dernier jour
-Février dans une année bissextile
-Février dans une année non bissextile
-Fin des mois (sauf février) dans une année non bissextile
-Fin des mois (sauf février) dans une année bissextile
+Milieu du mois, non dernier jour ;
+Milieu du mois, dernier jour ;
+Février dans une année bissextile ;
+Février dans une année non bissextile ;
+Fin des mois (sauf février) dans une année non bissextile ;
+Fin des mois (sauf février) dans une année bissextile ;
 
 `previousDate()`
 
 ##### Caractéristiques :
 
 Date actuelle :
-Date au milieu du mois
-Premier jour du mois
+Date au milieu du mois ;
+Premier jour du mois ;
 Scénarios d'année bissextile et non bissextile
 
 ##### Blocs :
 
-Milieu du mois, non premier jour
-Milieu du mois, premier jour
-Février dans une année bissextile
-Février dans une année non bissextile
-Début des mois (sauf février) dans une année non bissextile
-Début des mois (sauf février) dans une année bissextile
+Milieu du mois, non premier jour ;
+Milieu du mois, premier jour ;
+Février dans une année bissextile ;
+Février dans une année non bissextile ;
+Début des mois (sauf février) dans une année non bissextile ;
+Début des mois (sauf février) dans une année bissextile ;
 
 `compareTo(Date other)`
 
 ##### Caractéristiques :
 
 Comparaison des dates :
-
-Date avant l'autre
-Date après l'autre
-Date identique à l'autre
+Date avant l'autre ;
+Date après l'autre ;
+Date identique à l'autre ;
 
 ##### Blocs :
 
-Date avant l'autre
-Date après l'autre
-Date identique à l'autre
+Date avant l'autre ;
+Date après l'autre ;
+Date identique à l'autre ;
 
 #### Caractéristiques communes à plusieurs méthodes :
 
 Année : Année bissextile, année non bissextile
+
 Mois : Mois valide, mois invalide
+
 Jour : Jour valide, jour invalide
 
 
