@@ -155,4 +155,7 @@ Mois : Mois valide, mois invalide
 
 Jour : Jour valide, jour invalide
 
+#### 2.
+
+En utilisant la fonctionnalité de coverage d'IntelliJ, avec les tests créés selon ce design, nous avons obtenu une couverture de 100% des classes (logique, il n'y en a qu'une), 100% des méthodes et 86% des lignes.
 
