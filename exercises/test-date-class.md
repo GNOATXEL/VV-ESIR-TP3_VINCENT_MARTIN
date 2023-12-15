@@ -159,3 +159,10 @@ Jour : Jour valide, jour invalide
 
 En utilisant la fonctionnalité de coverage d'IntelliJ, avec les tests créés selon ce design, nous avons obtenu une couverture de 100% des classes (logique, il n'y en a qu'une), 100% des méthodes et 86% des lignes.
 
+#### 3. 
+
+Nous l'avons déjà fait en question 1, mais nous avons séparés tous les cas possibles pour trouver tous les blocs. Nous "figeons" toutes les caractéristiques sauf une, puis nous faisons varier la dernière. Nous faisons cela pour toutes les caractéristiques, ce qui permet d'avoir une bien meilleure couverture.
+
+#### 4.
+
+PIT indique 55 mutants créés, dont 39 tués,ce qui donne un mutation score de 70,91.
