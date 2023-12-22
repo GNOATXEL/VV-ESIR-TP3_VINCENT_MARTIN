@@ -39,4 +39,5 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 ![img_1.png](img_1.png)
 3. On remarque qu'à trois reprises, nous avons plus de deux booléens dans un if statement. Néanmoins, il est important de noter que ces lignes ont bien été testées. Ainsi, nous n'avons pas besoin de les tester davantage.
 4.  On constate ici la création de 33 tests, dont 19 concernent des mutations. Sur ces 19 mutations, 18 ont été éliminées avec succès, atteignant ainsi un taux de 95 %. C'est un résultat très positif. Cependant, il est à noter que nous n'avons pas réussi à améliorer davantage ce score.
+
  ![img.png](img.png)
