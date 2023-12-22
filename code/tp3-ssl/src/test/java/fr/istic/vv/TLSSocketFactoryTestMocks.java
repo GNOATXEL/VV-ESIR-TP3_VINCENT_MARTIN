@@ -53,16 +53,16 @@ public class TLSSocketFactoryTestMocks {
   @Test
   public void typical() {
     TLSSocketFactory tlsSocketFactory = new TLSSocketFactory();
-    SSLSocket mockSSLSocket = mock(SSLSocket.class);
+    SSLSocket mock = mock(SSLSocket.class);
 
-    when(mockSSLSocket.getSupportedProtocols()).thenReturn(new String[]{"SSLv2Hello", "SSLv3", "TLSv1", "TLSv1.1", "TLSv1.2"});
-    when(mockSSLSocket.getEnabledProtocols()).thenReturn(new String[]{"SSLv3", "TLSv1"});
-    tlsSocketFactory.prepareSocket(mockSSLSocket);
-    
+    when(mock.getSupportedProtocols()).thenReturn(new String[]{"SSLv2Hello", "SSLv3", "TLSv1", "TLSv1.1", "TLSv1.2"});
+    when(mock.getEnabledProtocols()).thenReturn(new String[]{"SSLv3", "TLSv1"});
+    tlsSocketFactory.prepareSocket(mock);
+
     ArgumentCaptor<String[]> argument = ArgumentCaptor.forClass(String[].class);
-    verify(mockSSLSocket).setEnabledProtocols(argument.capture());
+    verify(mock).setEnabledProtocols(argument.capture());
     String[] capturedProtocols = argument.getValue();
-    
+
     //Check des bonnes valeurs
     assertTrue(Arrays.equals(capturedProtocols, new String[]{"TLSv1.2", "TLSv1.1", "TLSv1", "SSLv3"}));
   }
