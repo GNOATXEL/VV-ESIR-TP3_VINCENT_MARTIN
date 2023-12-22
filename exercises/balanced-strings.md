@@ -45,3 +45,5 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 4.  On constate ici la création de 33 tests, dont 19 concernent des mutations. Sur ces 19 mutations, 18 ont été éliminées avec succès, atteignant ainsi un taux de 95 %. C'est un résultat très positif. Cependant, il est à noter que nous n'avons pas réussi à améliorer davantage ce score.
 
  ![img.png](img.png)
+
+L'ensemble des codes peuvent être trouver dans le dossier code/tp3-balanced-strings
