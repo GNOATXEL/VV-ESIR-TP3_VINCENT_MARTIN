@@ -167,3 +167,7 @@ Nous l'avons déjà fait en question 1, mais nous avons séparés tous les cas p
 
 PIT indique 55 mutants créés, dont 39 tués, ce qui donne un mutation score de 70,91. Ces mutants nous permettent d'estimer la qualité de nos tests, et le but est qu'on en est le plus possible de tués. Afin d'améliorer la qualité de nos tests, nous rajoutons dans les tests des assertions. Par exemple, un mutant subsistait dans le test de `isValidDate`, nous avions `changed conditional boundary → SURVIVED`d'indiqué sur le rapport PIT. Après avoir rajouté des assertions avec des valeurs proches des limites, nous passons à `changed conditional boundary → KILLED` et donc à 40 mutants tués.
 Nous avons aussi éliminé des mutants du côté de `isLeapYear`, en rajoutant d'autres assertions.
+
+## PS :
+
+Les codes sont trouvables dans le dossier code puis dans le dossier correspondant à la question.
