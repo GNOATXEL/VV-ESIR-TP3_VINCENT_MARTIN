@@ -1,7 +1,14 @@
 package fr.istic.vv;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
 public class TLSSocketFactoryTestMocks {
@@ -37,6 +44,28 @@ public class TLSSocketFactoryTestMocks {
 
     // Check que c'est appelé cette fois
     verify(mock).setEnabledProtocols(any(String[].class));
+
   }
+
+  /**
+   * Test qui check les valeurs
+   */
+  @Test
+  public void typical() {
+    TLSSocketFactory tlsSocketFactory = new TLSSocketFactory();
+    SSLSocket mockSSLSocket = mock(SSLSocket.class);
+
+    when(mockSSLSocket.getSupportedProtocols()).thenReturn(new String[]{"SSLv2Hello", "SSLv3", "TLSv1", "TLSv1.1", "TLSv1.2"});
+    when(mockSSLSocket.getEnabledProtocols()).thenReturn(new String[]{"SSLv3", "TLSv1"});
+    tlsSocketFactory.prepareSocket(mockSSLSocket);
+    
+    ArgumentCaptor<String[]> argument = ArgumentCaptor.forClass(String[].class);
+    verify(mockSSLSocket).setEnabledProtocols(argument.capture());
+    String[] capturedProtocols = argument.getValue();
+    
+    //Check des bonnes valeurs
+    assertTrue(Arrays.equals(capturedProtocols, new String[]{"TLSv1.2", "TLSv1.1", "TLSv1", "SSLv3"}));
+  }
+
 
 }
