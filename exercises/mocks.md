@@ -12,8 +12,7 @@ Propose a solution to this problem in your new Mockito-based test cases.
 
 # Answer
 
-Grâce à Mockito, nous pouvons vérifier (à l'aide de `verify `si une méthode est appelée ou non. Nous utilisons donc cette fonctionnalité afin de vérifier si `setEnabledProtocols` est appelée dans le cas normal, et si elle ne l'est pas lorsque les Protocols sont nuls. On s'assure donc que la méthode n'est pas vide, dans le cas où les Protocols sont nuls, la méthode va effectivement échouer dans tous les cas, mais dans le cas contraire, s'assurer d'un appel de `setEnabledProtocols` permet de s'assurer que la méthode n'est pas vide.
-Nous modifions aussi avec Mockito `typical`.
+Grâce à Mockito, nous pouvons vérifier (à l'aide de `verify `si une méthode est appelée ou non. Nous utilisons donc cette fonctionnalité afin de vérifier dans `typical `si `setEnabledProtocols` est appelée dans le cas normal, et si elle ne l'est pas lorsque les Protocols sont nuls. On s'assure donc que la méthode n'est pas vide, dans le cas où les Protocols sont nuls, la méthode va effectivement échouer dans tous les cas, mais dans le cas contraire, s'assurer d'un appel de `setEnabledProtocols` permet de s'assurer que la méthode n'est pas vide.
 
 ## PS :
 
