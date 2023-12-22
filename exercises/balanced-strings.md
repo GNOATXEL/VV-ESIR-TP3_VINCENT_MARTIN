@@ -37,6 +37,7 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 
 2. On remarque que nous avons réalisé un ensemble de 17 tests, chacun évaluant une des caractéristiques du tableau ci-dessus. Il est à noter que, parfois, pour une même caractéristique, plusieurs tests sont réalisés (par exemple, pour tester de nouvelles combinaisons). Nous avons ainsi couvert toutes les caractéristiques identifiées, ce qui nous permet de considérer avoir une couverture élevée. En ajoutant Jacoco pour l'évaluation, on observe un taux de couverture de 93 %.
+   
 ![img_1.png](img_1.png)
 
 3. On remarque qu'à trois reprises, nous avons plus de deux booléens dans un if statement. Néanmoins, il est important de noter que ces lignes ont bien été testées. Ainsi, nous n'avons pas besoin de les tester davantage.
