@@ -30,25 +30,7 @@ public class TLSSocketFactoryTestMocks {
   }
 
   /**
-   * Test quand ça n'est pas nul
-   */
-  @Test
-  public void preparedSocket_NotNullProtocols()  {
-    SSLSocket mock = mock(SSLSocket.class);
-
-    when(mock.getSupportedProtocols()).thenReturn(new String[]{"SSLv2Hello", "SSLv3", "TLSv1", "TLSv1.1", "TLSv1.2"});
-    when(mock.getEnabledProtocols()).thenReturn(new String[]{"SSLv3", "TLSv1"});
-
-    TLSSocketFactory f = new TLSSocketFactory();
-    f.prepareSocket(mock);
-
-    // Check que c'est appelé cette fois
-    verify(mock).setEnabledProtocols(any(String[].class));
-
-  }
-
-  /**
-   * Test qui check les valeurs
+   * Test qui check les valeurs + si y'a appel
    */
   @Test
   public void typical() {
@@ -60,6 +42,7 @@ public class TLSSocketFactoryTestMocks {
     tlsSocketFactory.prepareSocket(mock);
 
     ArgumentCaptor<String[]> argument = ArgumentCaptor.forClass(String[].class);
+    // Check que c'est appelé cette fois
     verify(mock).setEnabledProtocols(argument.capture());
     String[] capturedProtocols = argument.getValue();
 
